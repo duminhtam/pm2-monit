@@ -1,0 +1,38 @@
+{
+  "name": "pm2-monit",
+  "version": "0.1",
+  "description": "PM2 Monitoring Module",
+  "main": "./app.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:duminhtam/pm2-monit.git"
+  },
+  "config" : {
+    "node" : "web-services-node-1",
+    "pm2" : "~/.pm2",
+    "refresh" : 5000,
+    "statsd" : "10.60.6.3:8111"
+  },
+  "keywords": [],
+  "apps" : [{
+    "merge_logs"         : true,
+    "max_memory_restart" : "200M",
+    "script"             : "app.js"
+  }],
+  "author": {
+    "name": "Tam Du"
+  },
+  "dependencies": {
+    "async": "~1.4.2",
+    "chalk": "~1.1.0",
+    "lodash": "~3.10.1",
+    "pm2": "^1.1.3",
+    "pm2-axon": "~2.0.8",
+    "pm2-axon-rpc": "~0.3.6",
+    "pmx": "latest",
+    "shelljs": "^0.7.0"
+  },
+  "devDependencies": {
+    "statsd": "~0.7.2"
+  }
+}
